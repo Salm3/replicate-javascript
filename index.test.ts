@@ -671,13 +671,10 @@ describe('Replicate client', () => {
           { name: "Nvidia T4 GPU", sku: "gpu-t4" },
           { name: "Nvidia A40 GPU", sku: "gpu-a40-small" },
           { name: "Nvidia A40 (Large) GPU", sku: "gpu-a40-large" },
-          { name: "Nvidia A40 (Large) GPU (8x)", sku: "gpu-a40-large-8x" },
-          { name: "Nvidia A100 (40GB) GPU", sku: "gpu-a100-small" },
-          { name: "Nvidia A100 (80GB) GPU", sku: "gpu-a100-large" },
         ]);
 
       const hardware = await client.hardware.list();
-      expect(hardware.length).toBe(7);
+      expect(hardware.length).toBe(4);
       expect(hardware[ 0 ].name).toBe('CPU');
       expect(hardware[ 0 ].sku).toBe('cpu');
     });
